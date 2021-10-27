@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual Tour</title>
+
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+            
+        <script src="//unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js" target="_blank"></script>
+    
+        <script src = "js/Comics.js"></script>
+        
+        <script src = "js/Cursor_Events.js"></script>
+    </head>
+
+    <body>
+        <a-scene id = "main-scene">
+            <a-sky id = "main-container" color = "#ffceb8"></a-sky>
+            <a-entity id = "comics-container" cursor-events comics></a-entity>
+            <a-camera id = "camera" wasd-controls = "enabled: false;">
+                <a-entity id = "app-title" position = "0 0.73 -1" text = "font: exo2bold; align: center; width: 2.5; color: #41ff2b; value: Virtual Comics Store!">
+                    <a-entity id = "app-subtitle" position = "0 -0.1 0" text = "font: dejavu; align: center; width: 1; color: #e00d49; value: Get your favorite comics!"></a-entity>
+                </a-entity>
+                <a-entity id = "camera-cursor" cursor position = "0 0 -1" geometry = "primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material = "color: #46f0cb; shader: flat"></a-entity>
+            </a-camera>
+        </a-scene>
+    </body>
+</html>
